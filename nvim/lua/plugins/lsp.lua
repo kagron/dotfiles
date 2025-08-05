@@ -140,4 +140,17 @@ return {
 			})
 		end,
 	},
+	{
+		"folke/lazydev.nvim",
+		ft = "lua",
+		dependencies = {
+			{ "justinsgithub/wezterm-types", lazy = true },
+		},
+		opts = {
+			library = {
+				-- Other library configs...
+				{ path = "wezterm-types", mods = { "wezterm" } },
+			},
+		},
+	},
 }
