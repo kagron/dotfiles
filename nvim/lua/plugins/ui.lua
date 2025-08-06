@@ -30,6 +30,7 @@ return {
           ]],
 				},
 			},
+			bigfile = { enabled = false },
 		},
 	},
 }
