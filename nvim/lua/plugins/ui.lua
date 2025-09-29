@@ -1,3 +1,4 @@
+---@module 'snacks'
 return {
 	{
 		"akinsho/bufferline.nvim",
@@ -17,6 +18,7 @@ return {
 	},
 	{
 		"folke/snacks.nvim",
+    ---@type snacks.Config
 		opts = {
 			dashboard = {
 				preset = {
@@ -31,6 +33,14 @@ return {
 				},
 			},
 			bigfile = { enabled = false },
+      picker = {
+        enabled = true,
+        sources = {
+          projects = {
+            dev = { "~/dev", "~/projects", "~/sites"}
+          }
+        }
+      },
 		},
 	},
 }
