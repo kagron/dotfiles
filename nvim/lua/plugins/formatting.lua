@@ -5,6 +5,7 @@ return {
 		opts = {
 			formatters_by_ft = {
 				xml = { "xmlformatter" },
+				xslt = { "xmlformatter" },
 				json = { "jq" },
 			},
 		},
