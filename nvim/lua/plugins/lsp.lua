@@ -13,6 +13,9 @@ return {
 				"css-lsp",
 				"json-lsp",
 				"xmlformatter",
+				"uv",
+				"ruff",
+				"pyright",
 			})
 		end,
 	},
@@ -22,8 +25,13 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = {
 			inlay_hints = { enabled = false },
-			---@type lspconfig.options
+			---@type table<string, vim.lsp.Config>
 			servers = {
+				["*"] = {
+					keys = {
+						{ "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", has = "definition" },
+					},
+				},
 				tsserver = {
 					root_dir = function(...)
 						return require("lspconfig.util").root_pattern(".git")(...)
@@ -119,20 +127,10 @@ return {
 						},
 					},
 				},
+				ruff = {},
+				pyright = {},
 			},
 			setup = {},
-		},
-	},
-	{
-		"neovim/nvim-lspconfig",
-		opts = {
-			servers = {
-				["*"] = {
-					keys = {
-						{ "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", has = "definition" },
-					},
-				},
-			},
 		},
 	},
 	{

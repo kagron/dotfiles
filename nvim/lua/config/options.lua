@@ -21,6 +21,11 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+-- Select all
+keymap.set("n", "<leader>a", "ggVG")
+keymap.set("v", "<C-c>", '"+y')
+keymap.set("v", "<C-v>", '"+p')
+
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.showcmd = true

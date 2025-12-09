@@ -7,6 +7,7 @@ return {
 				xml = { "xmlformatter" },
 				xslt = { "xmlformatter" },
 				json = { "jq" },
+				py = { "ruff" },
 			},
 		},
 	},
